@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asif Chowdhury Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+    header {
+      background: linear-gradient(to right, #1a2a6c, #b21f1f, #fdbb2d);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .typewriter {
+      font-size: 1.5rem;
+      margin-top: 10px;
+      height: 30px;
+    }
+    .linkedin-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      border-radius: 999px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .linkedin-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+    .skills-marquee {
+      display: flex;
+      gap: 20px;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: marquee 20s linear infinite;
+    }
+    .skills-marquee span {
+      background: white;
+      color: #4c51bf;
+      border: 1px solid #c3dafe;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      min-width: fit-content;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .card {
+      background: white;
+      color: black;
+      padding: 24px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+    .soft-skill, .internship {
+      background: white;
+      color: #4c51bf;
+      padding: 10px 20px;
+      border-radius: 999px;
+      display: inline-block;
+      margin: 8px;
+      border: 1px solid #c3dafe;
+      font-weight: 500;
+    }
+    input, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+    textarea {
+      resize: vertical;
+    }
+    button {
+      background: #5a67d8;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #4c51bf;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Asif Chowdhury</h1>
+    <div class="typewriter" id="typewriter"></div>
+    <p>Crafting technical solutions that drive business growth and streamline operations.</p>
+    <a class="linkedin-btn" href="https://www.linkedin.com/in/asifchowdhury1993/" target="_blank">🚀 Let's Connect on LinkedIn</a>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="max-width: 700px; margin: auto;">Sales Engineer with a proven track in technical pre-sales... (shortened for brevity)</p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-marquee" id="skills-list"></div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div id="experience-list"></div>
+  </section>
+
+  <section id="soft-skills">
+    <h2>Soft Skills</h2>
+    <div id="soft-skill-list"></div>
+  </section>
+
+  <section id="internships">
+    <h2>Internship / Early Career Experience</h2>
+    <div id="internship-list"></div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    const allSkills = [
+      "GET/POST/PUT", "POSTMAN", "Webhooks", "JavaScript", "HTML/CSS",
+      "SQL", "Tableau", "AWS", "Azure",
+      "Loopio", "Zapier", "JIRA", "Salesforce", "HubSpot", "Microsoft Dynamics",
+      "SAML2", "SSO", "OAUTH2",
+      "OpenAI GPT", "LLMs", "DALLE"
+    ];
+
+    const softSkills = [
+      "Exceptional communication",
+      "Customer-Centric Approach",
+      "Collaboration and Teamwork",
+      "Strategic Vision",
+      "Negotiation and Persuasion",
+      "Problem-Solving and Critical Thinking"
+    ];
+
+    const experiences = [
+      { title: "Solutions Architect", company: "Stagwell Marketing Cloud", date: "Sept 2024 – Present", summary: "Sales engineering leadership, ..." },
+      { title: "Strategic Senior Sales Engineer", company: "SevenRooms", date: "Aug 2022 – June 2024", summary: "Client collaboration, ..." },
+      { title: "Senior Consultant", company: "Book&Brayer", date: "Jan 2024 – Present", summary: "Digital adoption forecasting, ..." },
+      { title: "Enterprise Sales Engineer", company: "Templafy", date: "July 2021 – July 2022", summary: "Pre- and post-sales support, ..." },
+      { title: "Solutions Engineer / Lead", company: "WalkMe", date: "Mar 2018 – June 2021", summary: "End-to-end implementation, ..." }
+    ];
+
+    const internships = [
+      { title: "Apple Genius", company: "Apple", location: "New York, NY", date: "2011 – 2015" },
+      { title: "Quality Assurance Analyst", company: "WalkMe", location: "New York, NY", date: "March 2017 – March 2018" },
+      { title: "Software Data Engineer Intern", company: "Thomson Reuters", location: "New York, NY", date: "June 2016 – September 2016" },
+      { title: "Quality Assurance Intern", company: "Major League Baseball", location: "New York, NY", date: "August 2014 – March 2015" }
+    ];
+
+    document.getElementById("skills-list").innerHTML = allSkills.concat(allSkills).map(skill => `<span>${skill}</span>`).join('');
+    document.getElementById("soft-skill-list").innerHTML = softSkills.map(skill => `<span class="soft-skill">${skill}</span>`).join('');
+    document.getElementById("experience-list").innerHTML = experiences.map(e => `<div class="card"><h3>${e.title} – ${e.company}</h3><p>${e.date}</p><p>${e.summary}</p></div>`).join('');
+    document.getElementById("internship-list").innerHTML = internships.map(i => `<div class="card"><h3>${i.title} – ${i.company}</h3><p>${i.location} • ${i.date}</p></div>`).join('');
+
+    const typewriter = ["Solutions Architect", "Sales Engineer", "Product Strategist"];
+    let twIndex = 0, charIndex = 0, forward = true;
+    const twEl = document.getElementById("typewriter");
+    setInterval(() => {
+      if (forward) {
+        twEl.textContent = typewriter[twIndex].substring(0, charIndex++);
+        if (charIndex > typewriter[twIndex].length + 5) forward = false;
+      } else {
+        charIndex--;
+        twEl.textContent = typewriter[twIndex].substring(0, charIndex);
+        if (charIndex === 0) {
+          forward = true;
+          twIndex = (twIndex + 1) % typewriter.length;
+        }
+      }
+    }, 120);
+
+    document.getElementById("contact-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("Message sent! Thanks, " + document.getElementById("name").value);
+    });
+  </script>
+</body>
+</html>
